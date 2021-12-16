@@ -15,12 +15,13 @@ import {
     StatusBar,
     StyleSheet,
     Text,
+    TextInput,
     useColorScheme,
     View
 } from 'react-native';
 
 import {Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions} from 'react-native/Libraries/NewAppScreen';
-import { Fragment } from 'react/cjs/react.production.min';
+import {Fragment} from 'react/cjs/react.production.min';
 
 const Section = ({children, title}): Node => {
     const isDarkMode = useColorScheme() === 'dark';
@@ -60,20 +61,23 @@ const App: () => Node = () => {
     };
 
     return (
-      <View>
         <View>
-            <Text>안녕</Text>
+            <View>
+                <TextInput  style={styles.input1}>
+
+                </TextInput>
+            </View>
         </View>
-        <View>
-            <Text>안녕</Text>
-        </View>
-        <View>
-            <Text>안녕</Text>
-        </View>
-      </View>
     );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  input1: {
+    backgroundColor:"skyblue",
+    fontSize:20,
+    borderRadius:15,
+    
+  }
+});
 
 export default App;
